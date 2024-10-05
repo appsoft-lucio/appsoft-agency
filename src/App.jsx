@@ -6,5 +6,12 @@ import Home from "./pages/Home";
 
 // Define e exporta o componente funcional "App", que é o ponto central da aplicação
 export default function App() {
-  return <Home></Home>;
+  return;
+  {
+    /* Página Home */
+  }
+
+  <>
+    <Home></Home>
+  </>;
 }
