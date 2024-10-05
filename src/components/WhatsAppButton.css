@@ -1,0 +1,13 @@
+.btn-whatsapp {
+  margin-left: 20px; /* Adiciona espaçamento ao lado do menu */
+  background-color: #25d366; /* Cor do botão WhatsApp */
+  color: white; /* Cor do texto */
+  border-radius: 5px; /* Bordas arredondadas */
+  padding: 10px 15px; /* Padding interno */
+  text-decoration: none; /* Remove sublinhado */
+  transition: background-color 0.3s; /* Transição ao passar o mouse */
+}
+
+.btn-whatsapp:hover {
+  background-color: #128c7e; /* Cor ao passar o mouse */
+}
