@@ -118,6 +118,50 @@ body {
   margin-bottom: 20px; /* Espaçamento entre os elementos */
 }
 
+/*Estilos da seção #serviços*/
+/* Centralizar o H1 */
+#servicos h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 2rem;
+}
+
+/* Definir a estrutura básica */
+#servicos .container {
+  display: grid;
+  grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
+  gap: 20px;
+}
+
+.tipo-de-site {
+  background-color: #ffffff; /* Fundo branco */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinha o conteúdo à esquerda */
+}
+
+/* Alinhar os ícones e títulos à esquerda */
+.tipo-de-site i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.tipo-de-site h2 {
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+
+/* Estilização responsiva para desktop */
+@media (min-width: 768px) {
+  #servicos .container {
+    grid-template-columns: repeat(3, 1fr); /* Três colunas em telas maiores */
+  }
+}
+
 button {
   background-color: #25d366; /* Cor de fundo do botão */
   color: white; /* Cor do texto do botão */
