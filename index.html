@@ -3,238 +3,169 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Agência AppSoft</title>
+    <meta
+      name="description"
+      content="Agência AppSoft - Criação de sites responsivos, lojas virtuais e blogs."
+    />
+    <meta
+      name="keywords"
+      content="AppSoft, agência digital, criação de sites, loja virtual, blog, portfólio"
+    />
+    <meta property="og:title" content="Agência AppSoft - Criação de Sites" />
+    <meta
+      property="og:description"
+      content="Transformamos sua visão digital em uma presença online impactante."
+    />
+    <meta property="og:image" content="img/Fundo-Inicio.jpg" />
+    <meta property="og:url" content="https://appsoft-agency.vercel.app" />
+    <meta property="og:type" content="website" />
+    <title>Agência AppSoft - Criação de Sites</title>
+    <link rel="shortcut icon" href="img/Fundo-Inicio.jpg" type="image/jpg" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+      defer
+    ></script>
   </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="container">
-          <a class="navbar-brand" href="#">AppSoft</a>
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#servicos">Serviços</a>
+  <body class="font-sans">
+    <header
+      x-data="{ scrolled: false }"
+      @scroll.window="scrolled = (window.scrollY > 50)"
+      :class="scrolled ? 'bg-gray-800 bg-opacity-75' : 'bg-transparent'"
+      class="fixed top-0 left-0 w-full z-10 transition-all duration-300"
+    >
+      <nav
+        class="flex justify-between items-center max-w-6xl mx-auto p-4 text-white"
+      >
+        <div class="logo text-xl font-bold"><a href="#inicio">AppSoft</a></div>
+        <div x-data="{ open: false }">
+          <span
+            @click="open = !open"
+            class="material-icons md:hidden cursor-pointer"
+            >menu</span
+          >
+          <ul
+            :class="open ? 'block' : 'hidden'"
+            class="md:flex md:space-x-6 absolute md:static bg-gray-800 md:bg-transparent w-full md:w-auto left-0 top-16 md:top-0 p-4 md:p-0"
+          >
+            <li>
+              <a href="#inicio" class="block hover:text-gray-300 py-2 md:py-0"
+                >Início</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre Nós</a>
+            <li>
+              <a href="#servicos" class="block hover:text-gray-300 py-2 md:py-0"
+                >Serviços</a
+              >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contato">Contato</a>
+            <li>
+              <a href="#sobre" class="block hover:text-gray-300 py-2 md:py-0"
+                >Sobre</a
+              >
+            </li>
+            <li>
+              <a href="#contato" class="block hover:text-gray-300 py-2 md:py-0"
+                >Contato</a
+              >
             </li>
           </ul>
-          <a href="https://wa.me/55{seu_numero}" class="whatsapp-button"
-            >WhatsApp</a
-          >
         </div>
       </nav>
     </header>
 
     <main>
-      <section id="inicio" class="hero">
-        <div class="info-box">
-          <h2>Criação de sites responsivos, Lojas Virtuais, Blog...</h2>
-          <h1>Agência Digital que prospera com seu sucesso​</h1>
-          <p>
+      <section
+        id="inicio"
+        class="py-40 bg-cover bg-center text-center"
+        style="background-image: url('img/Fundo-Inicio.jpg')"
+      >
+        <div
+          class="max-w-2xl mx-auto px-4 bg-white bg-opacity-90 p-8 rounded-lg shadow-lg"
+        >
+          <h2 class="text-xl text-gray-600 mb-2">
+            Criação de sites responsivos, Lojas Virtuais, Blog...
+          </h2>
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">
+            Agência Digital que prospera com seu sucesso
+          </h1>
+          <p class="text-gray-700 mb-6">
             Bem-vindo à AppSoft, onde transformamos sua visão digital em uma
             presença online impactante. Especializados na criação de sites
             personalizados, combinamos design inovador com funcionalidades
-            robustas para entregar soluções que não apenas capturam a essência
-            da sua marca, mas também oferecem uma experiência de usuário
-            excepcional.
+            robustas.
           </p>
-          <button>CONTATO &rarr;</button>
+          <a
+            href="#contato"
+            class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 inline-block"
+            >CONTATO →</a
+          >
         </div>
       </section>
 
-      <section id="servicos">
-        <h1>Contrate-nos para <br/> Desenvolver seu Site​</h1>
-        <div class="container">
-            <section class="tipo-de-site">
-                <i>&#x1F3EA;</i>
-                <h2>Loja Virtual</h2>
-                <p>Uma loja virtual é uma ferramenta poderosa para negócios...</p>
-            </section>
-            <section class="tipo-de-site">
-                <i>&#x1F4BC;</i>
-                <h2>Negócios</h2>
-                <p>Um site de negócios é uma plataforma digital projetada para representar...</p>
-            </section>
-            <section class="tipo-de-site">
-                <i>&#x1F4DD;</i>
-                <h2>Blog</h2>
-                <p>Blog é usado para postar conteúdo regularmente...</p>
-            </section>
-            <section class="tipo-de-site">
-                <i>&#x1F4C1;</i>
-                <h2>Portfólio</h2>
-                <p>Um portfólio é uma coleção organizada de trabalhos...</p>
-            </section>
-            <section class="tipo-de-site">
-                <i>&#x1F4BC;</i>
-                <h2>Eventos</h2>
-                <p>Um site de eventos é uma plataforma digital dedicada à promoção...</p>
-            </section>
-            <section class="tipo-de-site">
-                <i>&#x1F464;</i>
-                <h2>Pessoal</h2>
-                <p>Um site pessoal é uma plataforma online dedicada a representar um indivíduo...</p>
-            </section>
-        </div><section id="servicos">
-          <h1>Contrate-nos para <br/> Desenvolver seu Site​</h1>
-          <div class="container">
-              <section class="tipo-de-site">
-                  <i>&#x1F3EA;</i>
-                  <h2>Loja Virtual</h2>
-                  <p>Uma loja virtual é uma ferramenta poderosa para negócios...</p>
-              </section>
-              <section class="tipo-de-site">
-                  <i>&#x1F4BC;</i>
-                  <h2>Negócios</h2>
-                  <p>Um site de negócios é uma plataforma digital projetada para representar...</p>
-              </section>
-              <section class="tipo-de-site">
-                  <i>&#x1F4DD;</i>
-                  <h2>Blog</h2>
-                  <p>Blog é usado para postar conteúdo regularmente...</p>
-              </section>
-              <section class="tipo-de-site">
-                  <i>&#x1F4C1;</i>
-                  <h2>Portfólio</h2>
-                  <p>Um portfólio é uma coleção organizada de trabalhos...</p>
-              </section>
-              <section class="tipo-de-site">
-                  <i>&#x1F4BC;</i>
-                  <h2>Eventos</h2>
-                  <p>Um site de eventos é uma plataforma digital dedicada à promoção...</p>
-              </section>
-              <section class="tipo-de-site">
-                  <i>&#x1F464;</i>
-                  <h2>Pessoal</h2>
-                  <p>Um site pessoal é uma plataforma online dedicada a representar um indivíduo...</p>
-              </section>
+      <section id="servicos" class="py-20">
+        <h2 class="text-3xl font-bold text-center mb-10">Nossos Serviços</h2>
+        <div
+          class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4"
+        >
+          <div class="text-center p-6 bg-white shadow rounded">
+            <span class="text-4xl mb-4 block">🏪</span>
+            <h3 class="text-xl font-semibold mb-2">Loja Virtual</h3>
+            <p class="text-gray-600">
+              Ferramenta poderosa para negócios online.
+            </p>
           </div>
-      </section>
-      <section id="servicos">
-        <h1>Contrate-nos para <br/> Desenvolver seu Site​</h1>
-        <div class="container">
-            <section class="tipo-de-site">
-                <i>&#x1F3EA;</i>
-                <h2>Loja Virtual</h2>
-                <p>Uma loja virtual é uma ferramenta poderosa para negócios...</p>
-            </section>
-            <section class="tipo-de-site">
-                <i>&#x1F4BC;</i>
-                <h2>Negócios</h2>
-                <p>Um site de negócios é uma plataforma digital projetada para representar...</p>
-            </section>
-            <section class="tipo-de-site">
-                <i>&#x1F4DD;</i>
-                <h2>Blog</h2>
-                <p>Blog é usado para postar conteúdo regularmente...</p>
-            </section>
-            <section class="tipo-de-site">
-                <i>&#x1F4C1;</i>
-                <h2>Portfólio</h2>
-                <p>Um portfólio é uma coleção organizada de trabalhos...</p>
-            </section>
-            <section class="tipo-de-site">
-                <i>&#x1F4BC;</i>
-                <h2>Eventos</h2>
-                <p>Um site de eventos é uma plataforma digital dedicada à promoção...</p>
-            </section>
-            <section class="tipo-de-site">
-                <i>&#x1F464;</i>
-                <h2>Pessoal</h2>
-                <p>Um site pessoal é uma plataforma online dedicada a representar um indivíduo...</p>
-            </section>
+          <div class="text-center p-6 bg-white shadow rounded">
+            <span class="text-4xl mb-4 block">💼</span>
+            <h3 class="text-xl font-semibold mb-2">Negócios</h3>
+            <p class="text-gray-600">Plataforma digital para sua empresa.</p>
+          </div>
+          <div class="text-center p-6 bg-white shadow rounded">
+            <span class="text-4xl mb-4 block">📝</span>
+            <h3 class="text-xl font-semibold mb-2">Blog</h3>
+            <p class="text-gray-600">
+              Conteúdo regular para engajar seu público.
+            </p>
+          </div>
         </div>
-    </section>
-    <section id="servicos">
-      <h1>Contrate-nos para <br/> Desenvolver seu Site​</h1>
-      <div class="container">
-          <section class="tipo-de-site">
-              <i>&#x1F3EA;</i>
-              <h2>Loja Virtual</h2>
-              <p>Uma loja virtual é uma ferramenta poderosa para negócios...</p>
-          </section>
-          <section class="tipo-de-site">
-              <i>&#x1F4BC;</i>
-              <h2>Negócios</h2>
-              <p>Um site de negócios é uma plataforma digital projetada para representar...</p>
-          </section>
-          <section class="tipo-de-site">
-              <i>&#x1F4DD;</i>
-              <h2>Blog</h2>
-              <p>Blog é usado para postar conteúdo regularmente...</p>
-          </section>
-          <section class="tipo-de-site">
-              <i>&#x1F4C1;</i>
-              <h2>Portfólio</h2>
-              <p>Um portfólio é uma coleção organizada de trabalhos...</p>
-          </section>
-          <section class="tipo-de-site">
-              <i>&#x1F4BC;</i>
-              <h2>Eventos</h2>
-              <p>Um site de eventos é uma plataforma digital dedicada à promoção...</p>
-          </section>
-          <section class="tipo-de-site">
-              <i>&#x1F464;</i>
-              <h2>Pessoal</h2>
-              <p>Um site pessoal é uma plataforma online dedicada a representar um indivíduo...</p>
-          </section>
-      </div>
-  </section>
-  <section id="servicos">
-    <h1>Contrate-nos para <br/> Desenvolver seu Site​</h1>
-    <div class="container">
-        <section class="tipo-de-site">
-            <i>&#x1F3EA;</i>
-            <h2>Loja Virtual</h2>
-            <p>Uma loja virtual é uma ferramenta poderosa para negócios...</p>
-        </section>
-        <section class="tipo-de-site">
-            <i>&#x1F4BC;</i>
-            <h2>Negócios</h2>
-            <p>Um site de negócios é uma plataforma digital projetada para representar...</p>
-        </section>
-        <section class="tipo-de-site">
-            <i>&#x1F4DD;</i>
-            <h2>Blog</h2>
-            <p>Blog é usado para postar conteúdo regularmente...</p>
-        </section>
-        <section class="tipo-de-site">
-            <i>&#x1F4C1;</i>
-            <h2>Portfólio</h2>
-            <p>Um portfólio é uma coleção organizada de trabalhos...</p>
-        </section>
-        <section class="tipo-de-site">
-            <i>&#x1F4BC;</i>
-            <h2>Eventos</h2>
-            <p>Um site de eventos é uma plataforma digital dedicada à promoção...</p>
-        </section>
-        <section class="tipo-de-site">
-            <i>&#x1F464;</i>
-            <h2>Pessoal</h2>
-            <p>Um site pessoal é uma plataforma online dedicada a representar um indivíduo...</p>
-        </section>
-    </div>
-</section>
-            
-    </section>
-    
-        <h1>
-          Contrate-nos para <br />
-          Desenvelver seu Site​
-        </h1>
-        <div>
-          
+      </section>
+
+      <section id="sobre" class="py-20 bg-gray-100">
+        <h2 class="text-3xl font-bold text-center mb-6">Sobre Nós</h2>
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <p class="text-gray-700">
+            A AppSoft é uma agência digital apaixonada por criar soluções web
+            que fazem a diferença, combinando criatividade e tecnologia.
+          </p>
+        </div>
+      </section>
+
+      <section id="contato" class="py-20">
+        <h2 class="text-3xl font-bold text-center mb-6">Entre em Contato</h2>
+        <div class="flex justify-center space-x-6">
+          <a
+            href="https://wa.me/5531988047534"
+            class="flex items-center bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600"
+          >
+            <span class="material-icons mr-2">phone</span> WhatsApp
+          </a>
+          <a
+            href="mailto:luciocdesouza@gmail.com"
+            class="text-blue-600 hover:underline"
+            >Envie um Email</a
+          >
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <p>&copy; 2024 AppSoft. Todos os direitos reservados.</p>
+    <footer class="bg-gray-800 text-white text-center p-4">
+      <p>© 2024 AppSoft. Todos os direitos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
