@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://appsoft-lucio.github.io/appsoft-agency/sitemap.xml
